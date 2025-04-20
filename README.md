@@ -46,7 +46,11 @@ Each email message is cleaned using a preprocessing function:
 
 def preprocess_text(text): text = text.lower() # Convert to lowercase text = "".join([char for char in text if char not in string.punctuation]) # Remove punctuation words = text.split() # Tokenization words = [word for word in words if word not in stopwords.words("english")] # Remove stopwords return " ".join(words)
 
-This function: ✅ Converts text to lowercase (ensures uniformity). ✅ Removes punctuation (e.g., !@#$%^&*). ✅ Splits text into words (tokenization). ✅ Removes stopwords (e.g., “the”, “is”, “and”).
+This function: 
+✅ Converts text to lowercase (ensures uniformity).
+ ✅ Removes punctuation (e.g., !@#$%^&*).
+ ✅ Splits text into words (tokenization).
+ ✅ Removes stopwords (e.g., “the”, “is”, “and”).
 
 df["message"] = df["message"].apply(preprocess_text)
 
@@ -102,11 +106,17 @@ macro avg 0.96 0.97 0.96 1115 weighted avg 0.98 0.98 0.98 1115
 •	High precision & recall for spam (1) ensures low false positives.
 Key Benefits of This Model
 
-✅ Automates spam detection with minimal human intervention. ✅ Uses NLP techniques to extract meaningful features from text. ✅ Computationally efficient with Naïve Bayes classification. ✅ High accuracy & recall ensures effective email filtering.
+✅ Automates spam detection with minimal human intervention.
+ ✅ Uses NLP techniques to extract meaningful features from text.
+ ✅ Computationally efficient with Naïve Bayes classification. 
+✅ High accuracy & recall ensures effective email filtering.
 
 Potential Improvements
 
-🚀 Deep Learning: Use LSTMs or Transformers (BERT) for better performance. 🚀 Larger Dataset: Train on a bigger and diverse dataset. 🚀 Feature Engineering: Add n-grams, word embeddings, or sentiment analysis. 🚀 Deployment: Convert the model into an API for real-time spam filtering.
+🚀 Deep Learning: Use LSTMs or Transformers (BERT) for better performance. 
+🚀 Larger Dataset: Train on a bigger and diverse dataset. 
+🚀 Feature Engineering: Add n-grams, word embeddings, or sentiment analysis. 
+🚀 Deployment: Convert the model into an API for real-time spam filtering.
 
 Conclusion
 
